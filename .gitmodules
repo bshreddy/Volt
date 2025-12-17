@@ -8,7 +8,7 @@
 	branch = volt
 [submodule "cupbop"]
 	path = cupbop
-	url = https://github.com/cupbop/CuPBoP
+	url = https://github.com/cupbop/CuPBoP_Vortex
 	branch = main
 [submodule "llvm"]
 	path = llvm
