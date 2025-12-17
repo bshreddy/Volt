@@ -100,6 +100,10 @@ make install
 ### 6. Install pocl vortex
 
 ```bash
+cd $PRJ
+mv $POCL_PREFIX $TOOL_DIR/pocl-vortex-prebuilt 
+mkdir $TOOL_DIR/pocl-vortex
+
 cd $PRJ/pocl
 mkdir build && cd build
 
