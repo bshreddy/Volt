@@ -9,7 +9,7 @@
 [submodule "cupbop"]
 	path = cupbop
 	url = https://github.com/cupbop/CuPBoP_Vortex
-	branch = main
+	branch = master
 [submodule "llvm"]
 	path = llvm
 	url = https://github.com/vortexgpgpu/llvm
