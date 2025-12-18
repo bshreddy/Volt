@@ -6,63 +6,63 @@ git clone --recurse-submodules git@github.com:vortexgpgpu/Volt.git
 ```
 
 ## 1. Setup Environment
-
 ```bash
 cd tests/cc26_ae
 source set_env.sh
 ```
 
-For installing toolchain dependency for Vortex,
+To install toolchain dependencies for Vortex:
 ```bash
 cd $PRJ/vortex
-sudo sudo ./ci/install_dependencies.sh
+sudo ./ci/install_dependencies.sh
 ```
 
-## 2. Build Toolchain 
-```bash 
-./build.sh 
+## 2. Build Toolchain
+```bash
+./build.sh
 ```
-For trouble shooting, please check `tests/cc26_ae/troubleshoot.md`
 
-## 3. Test OpenCL 
+For troubleshooting, please check `tests/cc26_ae/troubleshoot.md`.
 
-For test opencl evaluation, perform following command.
-```bash 
+## 3. Test OpenCL
+
+To run the OpenCL evaluation, execute the following command:
+```bash
 ./../opencl/run_evaluation.sh
 ```
 
-The result will be,
-```bash 
+The output will look like:
+```bash
 Regression Test vs Expected (row-wise, 1% tol):
 
 [TOTAL]
 pass=40, fail_verification=0, fail_run=0
 ```
-And also show Instructions Reduction Table, Speedup Table, Coverage Tables.
 
-## 3. Test CUDA warp-level features in case study 1
+It will also print the Instruction Reduction Table, Speedup Table, and Coverage Tables.
 
-In this evaluation, we want to show extended support of cupbop with warp-level features. For test CUDA warp-level feature supports, perform following command.
+## 4. Test CUDA warp-level features (Case Study 1)
 
-```bash 
+This evaluation demonstrates the extended CuPBoP support for warp-level features. To run the CUDA warp-level feature evaluation, execute the following command:
+```bash
 ./../cuda/run_case_study1.sh
 ```
 
-The result will be
+The output will look like:
 ```bash
 === DONE: 5 jobs, fail=0 ===
 === ALL DONE: total_fail=0 ===
 ```
 
-## 4. Test CUDA memory features
+## 5. Test CUDA memory features
 
-In this evaluation, we want to show performance impact under memory configuration changes.
+This evaluation demonstrates the performance impact of memory-configuration changes.
 
-```bash 
-./../cuda/run_case_study1.sh
+```bash
+./../cuda/run_case_study2.sh
 ```
 
-The result will be
+The output will look like:
 ```bash
-
+# (example output)
 ```
