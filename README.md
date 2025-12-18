@@ -108,13 +108,17 @@ cd $PRJ/pocl
 mkdir build && cd build
 
 cmake -G "Unix Makefiles" \
-  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -DCMAKE_BUILD_TYPE=Debug \
   -DCMAKE_INSTALL_PREFIX=$POCL_PREFIX \
-  -DPOCL_LLVM_CONFIG=$LLVM_PREFIX/bin/llvm-config \
-  -DCLANG=$LLVM_PREFIX/bin/clang \
-  -DENABLE_HOST_CPU_DEVICES=ON \
-  -DENABLE_LLVM=ON \
-  -DENABLE_VORTEX_DEVICE=ON ..
+  -DWITH_LLVM_CONFIG=$LLVM_PREFIX/bin/llvm-config \
+  -DVORTEX_HOME=$VORTEX_HOME \
+  -DVORTEX_BUILD=$VORTEX_PREFIX \
+  -DENABLE_VORTEX=ON \
+  -DKERNEL_CACHE_DEFAULT=OFF \
+  -DENABLE_HOST_CPU_DEVICES=OFF \
+  -DENABLE_TESTS=OFF \
+  -DPOCL_DEBUG_MESSAGES=ON \
+  -DENABLE_ICD=OFF ..
 
 make -j`nproc`
 make install
@@ -122,13 +126,17 @@ make install
 
 ### 7. Install Cupbop
 ```bash
-cd $PRJ/CuPBoP
+cd $PRJ/cupbop
 export CuPBoP_PATH=pwd
 export LD_LIBRARY_PATH=$CuPBoP_PATH/build/runtime:$CuPBoP_PATH/build/runtime/threadPool:$LD_LIBRARY_PATH
 
 wget "https://dl.dropboxusercontent.com/scl/fi/m9ap1tiybau4zk720t2z7/cuda-header.tar.gz?rlkey=zmdpst5l66t48ywrbtkj426nu&st=luao6zy7" -O cuda-header.tar.gz
 tar -xzf 'cuda-header.tar.gz'
-cp -r include/R* runtime/threadPool/include/
+cp -r include/* runtime/threadPool/include/
+
+wget https://developer.download.nvidia.com/compute/cuda/12.1.1/local_installers/cuda_12.1.1_530.30.02_linux.run
+mkdir -p cuda-12.1
+sh cuda_12.1.1_530.30.02_linux.run --silent --toolkit --toolkitpath=$CuPBoP_PATH/cuda-12.1
 
 $CuPBoP_PATH/CuPBoP_env_setup.sh
 export VORTEX_ARCHITECTUE = 64                  # 64 if using 64-bit vortex
