@@ -1,13 +1,13 @@
 # Volt Artifact Evaluation for CC 2026
 
 ## 0. Our Test Environment
-We tested this artifact on two x86_64 hosts running Ubuntu 20.04 LTS: (i) AMD EPYC 7702P (64 cores) and (ii) Intel Xeon E5-2696. The entire test need more than day. 
+We tested this artifact on two x86_64 hosts running Ubuntu 20.04 LTS: (i) AMD EPYC 7702P (64 cores) and (ii) Intel Xeon E5-2696. The entire tests need more than a day. 
 
 ## 1. Clone Volt
 > Note: This artifact pins all dependencies via Git submodules. Please clone with `--recurse-submodules` (or run `git submodule update --init --recursive`) to check out the exact submodule commits used in our evaluation.
 
 ```bash
-git clone --recurse-submodules git@github.com:vortexgpgpu/Volt.git
+git clone --recurse-submodules https://github.com/vortexgpgpu/Volt.git
 ```
 
 ## 2. Setup Environment
