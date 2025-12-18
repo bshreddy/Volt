@@ -107,7 +107,7 @@ cd build
 cmake .. -DLLVM_CONFIG_PATH=$LLVM_PREFIX/bin/llvm-config
 make 
 
-cd $PRJ/cupbop/examples/bfs
+cd $PRJ/cupbop/examples/vecadd
 ./kjrun_llvm18.sh
 
 echo "CuPBoP-VORTEX build and installation completed."
