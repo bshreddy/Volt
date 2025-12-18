@@ -1,7 +1,7 @@
 # Volt Artifact Evaluation for CC 2026
 
 ## 0. Our Test Environment
-We tested this artifact on two x86_64 hosts running Ubuntu 20.04 LTS: (i) AMD EPYC 7702P (64 cores) and (ii) Intel Xeon E5-2696.
+We tested this artifact on two x86_64 hosts running Ubuntu 20.04 LTS: (i) AMD EPYC 7702P (64 cores) and (ii) Intel Xeon E5-2696. The entire test need more than day. 
 
 ## 1. Clone Volt
 > Note: This artifact pins all dependencies via Git submodules. Please clone with `--recurse-submodules` (or run `git submodule update --init --recursive`) to check out the exact submodule commits used in our evaluation.
@@ -66,8 +66,7 @@ The output will look like:
 === DONE: 5 jobs, fail=0 ===
 === ALL DONE: total_fail=0 ===
 ```
-
-In this evaluation, successful execution is the primary criterion because we extend compiler support and do not compare against a baseline.
+This case study is a functionality demonstration of new compiler/runtime support; therefore, we report correctness via successful execution rather than relative speedup.
 
 ## 6. Test CUDA memory features (Case Study 2, Figure 10)
 
