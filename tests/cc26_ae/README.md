@@ -27,7 +27,7 @@ sudo ./ci/install_dependencies.sh
 ./build.sh
 ```
 
-For troubleshooting, please check `tests/cc26_ae/troubleshoot.md`.
+For troubleshooting, please check [troubleshoot](https://github.com/vortexgpgpu/Volt/blob/master/tests/cc26_ae/troubleshoot.md).
 
 ## 4. Test OpenCL (Figure 7 and 8)
 
@@ -111,11 +111,9 @@ To explore Vortex’s highly reconfigurable architecture and the VOLT compiler, 
 ```bash
 cd $VORTEX_PREFIX
 export VORTEX_DIVERGENCE_OPT_LEVEL=<vortex-branch-opt>
-./ci/blackbox.sh --cores=<#cores> --warps=<#warps> --threads=<#threads> --l2cache --app=opencl/<benchmark-name>
+./ci/blackbox.sh --cores=`<#cores>` --warps=`<#warps>` --threads=`<#threads>` --l2cache --app=`opencl/<benchmark-name>`
 ```
 
-For more details on changing the Vortex architecture and configuration, please check the docs:
-- [docs](https://github.com/vortexgpgpu/Volt/blob/master/docs/1.getting_started.md#2-changing-the-vortex-architecture-and-configuration)
+For more details on changing the Vortex architecture and configuration, please check the [docs](https://github.com/vortexgpgpu/Volt/blob/master/docs/1.getting_started.md#2-changing-the-vortex-architecture-and-configuration)
 
-For more details on changing `vortex-branch-opt`, please check:
-- [docs](https://github.com/vortexgpgpu/Volt/blob/master/docs/6.analysis_and_transform_passess.md)
+For more details on changing `vortex-branch-opt`, please chec the [docs](https://github.com/vortexgpgpu/Volt/blob/master/docs/6.analysis_and_transform_passess.md)
