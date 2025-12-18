@@ -1,0 +1,24 @@
+Coverage Table
+Folder,Covered
+backprop,Yes
+bfs,Yes
+blackscholes,Yes
+b+tree,Yes
+cfd,Yes
+conv3,Yes
+dotproduct,Yes
+hotspot3D,Yes
+kmeans,Yes
+lavaMD,Yes
+nearn,Yes
+lbm,Yes
+pathfinder,Yes
+psum,Yes
+saxpy,Yes
+sfilter,Yes
+sgemm3,Yes
+spmv,Yes
+srad,Yes
+transpose,Yes
+vecadd,Yes
+psort,Yes

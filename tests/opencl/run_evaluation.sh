@@ -10,10 +10,15 @@ cd $VORTEX_PREFIX/tests/opencl
 echo $(pwd)
 
 cp $TEST_HOME/test_divergence_opt.sh .
+cp $TEST_HOME/test_coverage.sh .
 cp $TEST_HOME/subtest_divergence_opt.sh .
 cp $TEST_HOME/parser.py .
+cp $TEST_HOME/Figure7_expected.csv .
+cp $TEST_HOME/Figure8_expected.csv .
+cp $TEST_HOME/coverage_expected.csv .
 
 ./test_divergence_opt.sh
+./test_coverage.sh
 
 python parser.py
 #cat Figure7.csv

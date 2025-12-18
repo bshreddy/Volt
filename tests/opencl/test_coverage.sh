@@ -47,9 +47,11 @@ for folder in "${folders[@]}"; do
     echo "[skip] O8 result already exists in: $folder" >&2
     continue
   fi
-  
+
   cd $folder
+  echo "[RUN] VORTEX_DIVERGENCE_OPT_LEVEL=8 make run-simx in $folder"
   VORTEX_DIVERGENCE_OPT_LEVEL=8 make run-simx > ../log/log_opt_level_${folder}_8.txt 2>&1 & 
+  cd ..
 done 
 
 
