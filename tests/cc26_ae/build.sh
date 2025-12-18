@@ -1,5 +1,7 @@
 #!/bin/bash
 
+AE_HOME_DIR=$(pwd)
+
 : "${PRJ:?ERROR: $PRJ is not set. Please provide $PRJ(Path-to-Volt-repo)}"
 
 printf "Volt Path: %s\n" "$PRJ"
@@ -109,3 +111,5 @@ cd $PRJ/cupbop/examples/bfs
 ./kjrun_llvm18.sh
 
 echo "CuPBoP-VORTEX build and installation completed."
+
+cd $AE_HOME_DIR
