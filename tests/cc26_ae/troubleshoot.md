@@ -14,3 +14,14 @@ sudo apt update
 sudo apt install -y cmake
 cmake --version
 ```
+
+## VERILATOR ERROR 
+If you following error, 
+```bash 
+%Error: verilator: VERILATOR_ROOT is set to inconsistent path. Suggest leaving it unset.
+```
+
+Please unser VERILATOR_ROOT
+```bash 
+unset VERILATOR_ROOT
+```
