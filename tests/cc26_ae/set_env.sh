@@ -1,4 +1,8 @@
-#export PRJ=~/Volt
+export PRJ="$(cd ../../. && pwd)"
+
+: "${PRJ:?ERROR: $PRJ is not set. Please provide $PRJ(Path-to-Volt-repo)}"
+
+
 export TOOL_DIR=$PRJ/tools
 
 # env setup for VORTEX

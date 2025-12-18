@@ -1,29 +1,24 @@
 #!/bin/bash
 
-: "${1:?Usage: $0 <Please provide path to Volt repo>}"
+: "${PRJ:?ERROR: $PRJ is not set. Please provide $PRJ(Path-to-Volt-repo)}"
 
-export PRJ=$1
-echo $PRJ 
-
-# Set up environment variables
-./set_env.sh 
+printf "Volt Path: %s\n" "$PRJ"
 printf "Vortex Architecture: %d\n" "$VORTEX_ARCHITECTURE"
 
 # Create necessary directories
 cd $PRJ 
-mkdir tools 
-echo "Created tools directory at $PRJ/tools"
+mkdir -p tools 
+echo "Created tools directory: $PRJ/tools"
 
 #-----------------------------------------------------#
 # Build VORTEX
+
 printf "Starting VORTEX build for %d-bit architecture...\n" "$VORTEX_ARCHITECTURE"
 cd $PRJ/vortex 
-ls pwd
-sudo ./ci/install_dependencies.sh
+#sudo ./ci/install_dependencies.sh
 
 mkdir -p build
 cd build
-ls pwd 
 
 ../configure --xlen=64 --tooldir=$TOOL_DIR --prefix=$VORTEX_PREFIX
 ./ci/toolchain_install.sh --all 
@@ -31,7 +26,7 @@ source ./ci/toolchain_env.sh
 make -s
 make install
 
-./ci/blackbox.sh --cores=4 --warps=16 --threads=32 --app=opencl/vecadd
+./ci/blackbox.sh --cores=4 --warps=16 --threads=32 --app=vecadd   
 
 echo "VORTEX build and installation completed."
 ls $VORTEX_HOME/build 
@@ -49,6 +44,7 @@ cd build
 
 cmake -G "Unix Makefiles" -DLLVM_ABI_BREAKING_CHECKS=FORCE_OFF -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_TESTS=OFF -DBUILD_SHARED_LIBS=True -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLLVM_ENABLE_ASSERTIONS=ON -DLLVM_ENABLE_PROJECTS="clang" -DCMAKE_INSTALL_PREFIX=$LLVM_PREFIX -DDEFAULT_SYSROOT=$RISCV_TOOLCHAIN_ELF_PATH -DLLVM_DEFAULT_TARGET_TRIPLE="riscv64-unknown-elf" -DLLVM_TARGETS_TO_BUILD="X86;RISCV;NVPTX" ../llvm
 make -j`nproc`
+
 make install
 
 echo "LLVM-VORTEX build and installation completed."
@@ -80,6 +76,9 @@ cmake -G "Unix Makefiles" \
 
 make -j`nproc`
 make install
+
+cd $PRJ/vortex/build
+./ci/blackbox.sh --cores=4 --warps=16 --threads=32 --app=opencl/vecadd   
 
 echo "POCL-VORTEX build and installation completed."
 ls $POCL_PREFIX
