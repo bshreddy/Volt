@@ -7,7 +7,7 @@ We tested this artifact on two x86_64 hosts running Ubuntu 20.04 LTS: (i) AMD EP
 > Note: This artifact pins all dependencies via Git submodules. Please clone with `--recurse-submodules` (or run `git submodule update --init --recursive`) to check out the exact submodule commits used in our evaluation.
 
 ```bash
-git clone --recurse-submodules git@github.com:vortexgpgpu/Volt.git
+git clone --recurse-submodules https://github.com/vortexgpgpu/Volt.git
 ```
 
 ## 2. Setup Environment
