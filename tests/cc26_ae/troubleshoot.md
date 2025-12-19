@@ -25,3 +25,16 @@ Please unser VERILATOR_ROOT
 ```bash 
 unset VERILATOR_ROOT
 ```
+
+## CuPBoP clang cannot find installed CUDA toolkit
+
+If you see an error during CuPBoP clang compilation indicating that the **installed CUDA toolkit cannot be found**, install CUDA Toolkit locally under `CuPBoP_PATH` and retry.
+
+Run:
+
+```bash
+cd "$CuPBoP_PATH"
+wget https://developer.download.nvidia.com/compute/cuda/12.1.1/local_installers/cuda_12.1.1_530.30.02_linux.run
+mkdir -p cuda-12.1
+sh cuda_12.1.1_530.30.02_linux.run --toolkit --toolkitpath="$CuPBoP_PATH/cuda-12.1"
+```
