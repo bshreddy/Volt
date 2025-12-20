@@ -86,7 +86,6 @@ bfs         passed
 btree       passed  
 conv3       passed  
 dotproduct  passed  
-gauss       passed  
 nn          passed  
 pathfinder  passed  
 psort       passed  
@@ -98,7 +97,7 @@ transpose   passed
 vecadd      passed  
 
 Counts:
-  passed: 15
+  passed: 14
 ```
 
 The final result of this evaluation is located in `cupbop/examples/perf_summary_localmem_l2_sums.csv`.
