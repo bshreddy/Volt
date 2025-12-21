@@ -1,0 +1,9 @@
+{
+  "title": "VOLT: Vortex-Optimized Lightweight Toolchain",
+  "upload_type": "software",
+  "license": { "id": "Apache-2.0" },
+  "creators": [
+    { "name": "VortexGPGPU Team" }
+  ],
+  "description": "VOLT is an end-to-end, open-source compiler framework for the Vortex open-source GPU and its variants. It supports multiple front-end languages, including CUDA and OpenCL, by extending two open-source projects, PoCL and CuPBoP. VOLT also extends LLVM to enable SIMT-aware, IR-level optimizations for portability across GPU variants, and augments LLVM-RISC-V to provide full support for the Vortex ISA."
+}
