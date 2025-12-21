@@ -1,0 +1,20 @@
+cff-version: 1.1.0
+message: "If you use VOLT, please cite it as below."
+title: "Inside VOLT: Designing an Open-Source GPU Compiler (Tool)"
+version: "v1.0"
+date-released: "2025-12-21"
+doi: "10.1145/3771775.3786275"
+
+authors:
+  - family-names: "Jeong"
+    given-names: "Shinnung"
+  - family-names: "Ahn"
+    given-names: "Chihyo"
+  - family-names: "Pu"
+    given-names: "Huanzhi"
+  - family-names: "Zhao"
+    given-names: "Jisheng"
+  - family-names: "Kim"
+    given-names: "Hyesoon"
+  - family-names: "Tine"
+    given-names: "Blaise"
