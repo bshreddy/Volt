@@ -1,9 +1,9 @@
 # Vortex-Optimized Light-weight Toolchain (VOLT)
-Volt is an end-to-end, open-source compiler framework for the Vortex open-source GPU and its variants. It supports multiple front-end languages, including CUDA and OpenCL, by extending two open-source projects, PoCL and CuPBoP. Volt also extends LLVM to enable SIMT-aware IR-level optimizations for portability across GPU variants, and augments LLVM-RISC-V to provide full support for the Vortex ISA.
+VOLT is an end-to-end, open-source compiler framework for the Vortex open-source GPU and its variants. It supports multiple front-end languages, including CUDA and OpenCL, by extending two open-source projects, PoCL and CuPBoP. VOLT also extends LLVM to enable SIMT-aware IR-level optimizations for portability across GPU variants, and augments LLVM-RISC-V to provide full support for the Vortex ISA.
 
 <img src="docs/framework.png" alt="Volt Overview" width="400"/>
 
-The figure shows an overview of Volt, with the modules extended or introduced by Volt highlighted in blue.
+The figure shows an overview of VOLT, with the modules extended or introduced by VOLT highlighted in blue.
 
 ## Citation and Presentation Materials
 ### Vortex Tutorials
@@ -54,7 +54,7 @@ cd Volt
 mkdir tools 
 ```
 
-### 3. Make config file (add into bash file)
+### 3. Make a config file (add to the bash file)
 
 ```bash
   export PRJ=<path-to-volt-folder>
@@ -97,7 +97,7 @@ make -j`nproc`
 make install
 ```
 
-### 6. Install pocl vortex
+### 6. Install POCL-Vortex
 
 ```bash
 cd $PRJ
@@ -124,7 +124,7 @@ make -j`nproc`
 make install
 ```
 
-### 7. Install Cupbop
+### 7. Install CuPBoP-Vortex
 ```bash
 cd $PRJ/cupbop
 export CuPBoP_PATH=pwd
@@ -145,7 +145,7 @@ cmake .. -DLLVM_CONFIG_PATH=`which llvm-config` # need path to llvm-config
 make 
 ```
 
-Extend config file (add into bash file)
+Extend the config file (add to the bash file)
 
 ```bash
 export RISCV_TOOLCHAIN=${TOOL_DIR}/riscv64-gnu-toolchain # Assume Vortex is setup with 64-bit RISC-V
