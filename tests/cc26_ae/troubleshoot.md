@@ -38,3 +38,12 @@ wget https://developer.download.nvidia.com/compute/cuda/12.1.1/local_installers/
 mkdir -p cuda-12.1
 sh cuda_12.1.1_530.30.02_linux.run --toolkit --toolkitpath="$CuPBoP_PATH/cuda-12.1"
 ```
+
+## libtinfo-dev missing (Ubuntu / Docker)
+
+In minimal Ubuntu environments (especially fresh Docker images), cupbop (or its toolchain) may fail to build because a few system development libraries are not installed by default.
+
+```bash
+sudo apt update
+sudo apt install -y libtinfo-dev 
+```

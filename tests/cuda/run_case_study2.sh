@@ -2,7 +2,7 @@
 
 AE_HOME_DIR=$(pwd)
 
-pip install pandas
+pip3 install pandas
 
 
 export VORTEX_L2_FLAG=0
@@ -22,8 +22,8 @@ cd $VORTEX_PREFIX
 cd $CuPBoP_PATH/examples
 ./CC_batch_run.sh
 
-python collect_result.py -s test_tmp
+python3 collect_result.py -s test_tmp
 
-python result_comparison.py perf_summary_localmem_l2_sums.csv
+python3 result_comparison.py perf_summary_localmem_l2_sums.csv
 
 cd $HOME_DIR
