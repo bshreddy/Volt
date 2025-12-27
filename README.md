@@ -10,6 +10,9 @@ The figure shows an overview of VOLT, with the modules extended or introduced by
 - https://vortex.cc.gatech.edu/
 - https://github.com/vortexgpgpu/vortex_tutorials/tree/main
 
+### VOLT paper
+The VOLT paper was accepted to CC 2026 and will appear in January 2026.
+
 ### Arixv Paper ([link](https://arxiv.org/abs/2511.13751))
 ```bibtex
 @misc{jeong2025insidevoltdesigningopensource,
