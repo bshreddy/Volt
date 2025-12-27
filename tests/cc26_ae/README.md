@@ -22,6 +22,12 @@ cd $PRJ/vortex
 sudo ./ci/install_dependencies.sh
 ```
 
+To install the required system libraries for CuPBoP_Vortex:
+```bash
+sudo apt-get update
+sudo apt-get install -y libtinfo-dev zlib1g-dev
+```
+
 ## 3. Build Toolchain
 ```bash
 ./build.sh
