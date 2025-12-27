@@ -39,11 +39,32 @@ mkdir -p cuda-12.1
 sh cuda_12.1.1_530.30.02_linux.run --toolkit --toolkitpath="$CuPBoP_PATH/cuda-12.1"
 ```
 
-## libtinfo-dev missing (Ubuntu / Docker)
+## Missing system libs (`-ltinfo`, `-lz`) on minimal Ubuntu/Docker
 
-In minimal Ubuntu environments (especially fresh Docker images), cupbop (or its toolchain) may fail to build because a few system development libraries are not installed by default.
+If the CMake build in CuPBoP_Vortex fails with linker errors like:
 
 ```bash
-sudo apt update
-sudo apt install -y libtinfo-dev 
+/usr/bin/ld: cannot find -ltinfo
+collect2: error: ld returned 1 exit status
 ```
+
+or
+
+```bash
+/usr/bin/ld: cannot find -lz
+collect2: error: ld returned 1 exit status
+```
+
+install the missing development packages:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y libtinfo-dev zlib1g-dev
+```
+
+If -ltinfo still fails on your Ubuntu variant, try:
+```bash
+sudo apt-get update
+sudo apt-get install -y libncurses-dev
+```
+
