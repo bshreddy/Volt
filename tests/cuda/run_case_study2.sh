@@ -2,7 +2,7 @@
 
 AE_HOME_DIR=$(pwd)
 
-pip3 install pandas
+python3 -m pip install --user pandas
 
 
 export VORTEX_L2_FLAG=0
