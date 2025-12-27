@@ -20,7 +20,7 @@ cp $TEST_HOME/coverage_expected.csv .
 ./test_divergence_opt.sh
 ./test_coverage.sh
 
-python parser.py
+python3 parser.py
 #cat Figure7.csv
 #cat Figure8.csv
 #cat coverage.csv

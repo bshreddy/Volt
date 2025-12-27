@@ -25,7 +25,7 @@ sudo ./ci/install_dependencies.sh
 To install the required system libraries (and optional 32-bit zlib) for CuPBoP_Vortex:
 ```bash
 sudo apt-get update
-sudo apt-get install -y libtinfo-dev zlib1g-dev lib32z1-dev
+sudo apt-get install -y libtinfo-dev lib32z1-dev
 ```
 
 ## 3. Build Toolchain
