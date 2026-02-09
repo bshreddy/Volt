@@ -10,7 +10,7 @@ The figure shows an overview of VOLT, with the modules extended or introduced by
 - https://vortex.cc.gatech.edu/
 - https://github.com/vortexgpgpu/vortex_tutorials/tree/main
 
-### VOLT paper
+### VOLT paper ([link](https://dl.acm.org/doi/10.1145/3771775.3786275))
 The VOLT paper was accepted in the 35th ACM SIGPLAN International Conference on Compiler Construction (CC' 2026).
 ```bibtex
 
