@@ -11,18 +11,21 @@ The figure shows an overview of VOLT, with the modules extended or introduced by
 - https://github.com/vortexgpgpu/vortex_tutorials/tree/main
 
 ### VOLT paper
-The VOLT paper was accepted to CC 2026 and will appear in January 2026.
-
-### Arixv Paper ([link](https://arxiv.org/abs/2511.13751))
+The VOLT paper was accepted in the 35th ACM SIGPLAN International Conference on Compiler Construction (CC' 2026).
 ```bibtex
-@misc{jeong2025insidevoltdesigningopensource,
-      title={Inside VOLT: Designing an Open-Source GPU Compiler}, 
-      author={Shinnung Jeong and Chihyo Ahn and Huanzhi Pu and Jisheng Zhao and Hyesoon Kim and Blaise Tine},
-      year={2025},
-      eprint={2511.13751},
-      archivePrefix={arXiv},
-      primaryClass={cs.DC},
-      url={https://arxiv.org/abs/2511.13751}, 
+
+BibTeX
+@inproceedings{10.1145/3771775.3786275,
+author = {Jeong, Shinnung and Ahn, Chihyo and Pu, Huanzhi and Zhao, Jisheng and Kim, Hyesoon and Tine, Blaise},
+title = {Inside VOLT: Designing an Open-Source GPU Compiler (Tool)},
+year = {2026},
+isbn = {9798400722745},
+url = {https://doi.org/10.1145/3771775.3786275},
+doi = {10.1145/3771775.3786275},
+booktitle = {Proceedings of the 35th ACM SIGPLAN International Conference on Compiler Construction},
+keywords = {Compiler, Divergence Management, Open GPU},
+location = {Sydney, NSW, Australia},
+series = {CC '26}
 }
 ```
 
