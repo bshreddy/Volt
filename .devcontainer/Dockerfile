@@ -19,6 +19,11 @@ RUN apt-get update && \
     update-locale LANG=en_US.UTF-8 && \
     update-locale LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 
+RUN wget https://apt.llvm.org/llvm.sh -O /tmp/llvm.sh && \
+    chmod +x /tmp/llvm.sh && \
+    /tmp/llvm.sh 21 && \
+    apt install clangd-21
+
 ENV PRJ=/workspaces/volt
 ENV TOOLDIR=$PRJ/tools
 
