@@ -1,0 +1,12 @@
+{
+    "name": "HpArch",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "options": ["--platform=linux/amd64"],
+        "context": ".."
+    },
+    "runArgs": ["--name", "hparch"],
+    "customizations": {
+
+    }
+}

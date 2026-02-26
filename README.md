@@ -48,7 +48,7 @@ series = {CC '26}
 │   ├── verilator
 │   ├── vortex
 │   └── yosys
-├── pocl 
+├── pocl
 ├── llvm-vortex
 └── vortex
 ```
@@ -57,7 +57,7 @@ series = {CC '26}
 
 ```bash
 cd Volt
-mkdir tools 
+mkdir tools
 ```
 
 ### 3. Make a config file (add to the bash file)
@@ -71,7 +71,7 @@ mkdir tools
   source $PRJ/vortex/build/ci/toolchain_env.sh
 ```
 
-### 4. Install vortex 
+### 4. Install vortex
 
 ```bash
 cd $PRJ/vortex
@@ -86,11 +86,11 @@ make install
 ./ci/blackbox.sh --cores=2 --app=opencl/vecadd # test
 ```
 
-### 5. Install llvm-vortex 
+### 5. Install llvm-vortex
 
 ```bash
 cd $PRJ
-mv $LLVM_PREFIX $TOOL_DIR/llvm-vortex-prebuilt 
+mv $LLVM_PREFIX $TOOL_DIR/llvm-vortex-prebuilt
 mkdir $TOOL_DIR/llvm-vortex
 
 cd llvm
@@ -107,7 +107,7 @@ make install
 
 ```bash
 cd $PRJ
-mv $POCL_PREFIX $TOOL_DIR/pocl-vortex-prebuilt 
+mv $POCL_PREFIX $TOOL_DIR/pocl-vortex-prebuilt
 mkdir $TOOL_DIR/pocl-vortex
 
 cd $PRJ/pocl
@@ -145,10 +145,10 @@ mkdir -p cuda-12.1
 sh cuda_12.1.1_530.30.02_linux.run --silent --toolkit --toolkitpath=$CuPBoP_PATH/cuda-12.1
 
 $CuPBoP_PATH/CuPBoP_env_setup.sh
-export VORTEX_ARCHITECTUE = 64                  # 64 if using 64-bit vortex
+export VORTEX_ARCHITECTURE = 64                  # 64 if using 64-bit vortex
 mkdir build && cd build
 cmake .. -DLLVM_CONFIG_PATH=`which llvm-config` # need path to llvm-config
-make 
+make
 ```
 
 Extend the config file (add to the bash file)
@@ -173,9 +173,9 @@ cd ./exampless/cfd
 
 ## Test Toolchain
 
-### 0. Test Benchmark Location for Each Pipeline 
+### 0. Test Benchmark Location for Each Pipeline
 - OpenCL to Vortex pipeline is in vortex/tests/opencl
-- CUDA to Vortex pipeline is in cupbop/examples 
+- CUDA to Vortex pipeline is in cupbop/examples
 
 ### 1. Test OpenCL Benchmarks with Thread Divergence Optimizations
 
