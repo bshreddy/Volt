@@ -1,7 +1,7 @@
 [submodule "vortex"]
 	path = vortex
 	url = https://github.com/vortexgpgpu/vortex
-	branch = volt
+	branch = bug_fixes
 [submodule "pocl"]
 	path = pocl
 	url = https://github.com/vortexgpgpu/pocl
@@ -13,4 +13,4 @@
 [submodule "llvm"]
 	path = llvm
 	url = https://github.com/vortexgpgpu/llvm
-	branch = volt
+	branch = vortex_2.x

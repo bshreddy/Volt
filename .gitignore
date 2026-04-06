@@ -1,0 +1,8 @@
+**/build
+cmake
+tools
+.vscode
+*.ll
+cmds.md
+**/*.cache/*
+**/*.idx
